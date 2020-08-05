@@ -1,0 +1,72 @@
+{
+	"textures": {
+		"1": "kittycamp:block/stick_mallow",
+		"particle": "kittycamp:block/stick_mallow"
+	},
+	"elements": [
+		{
+			"name": "Stick1",
+			"from": [8, -1.8, 7],
+			"to": [9, 12.2, 8],
+			"rotation": {"angle": -22.5, "axis": "x", "origin": [8.5, 1.7, 7.5]},
+			"faces": {
+				"north": {"uv": [1, 2, 2, 16], "texture": "#1"},
+				"east": {"uv": [0, 2, 1, 16], "texture": "#1"},
+				"south": {"uv": [3, 2, 4, 16], "texture": "#1"},
+				"west": {"uv": [2, 2, 3, 16], "texture": "#1"},
+				"up": {"uv": [2, 2, 1, 1], "texture": "#1"},
+				"down": {"uv": [3, 1, 2, 2], "texture": "#1"}
+			}
+		},
+		{
+			"name": "Stick2",
+			"from": [8, 1.7, 7],
+			"to": [9, 5.7, 8],
+			"rotation": {"angle": 0, "axis": "x", "origin": [8.5, 1.7, 7.5]},
+			"faces": {
+				"north": {"uv": [9, 9, 10, 13], "texture": "#1"},
+				"east": {"uv": [8, 9, 9, 13], "texture": "#1"},
+				"south": {"uv": [11, 9, 12, 13], "texture": "#1"},
+				"west": {"uv": [10, 9, 11, 13], "texture": "#1"},
+				"up": {"uv": [10, 9, 9, 8], "texture": "#1"},
+				"down": {"uv": [11, 8, 10, 9], "texture": "#1"}
+			}
+		},
+		{
+			"name": "Mallow",
+			"from": [7.4, 9, 6.4],
+			"to": [9.6, 11.2, 8.6],
+			"rotation": {"angle": -22.5, "axis": "x", "origin": [8.5, 1.7, 7.5]},
+			"faces": {
+				"north": {"uv": [10, 2, 12, 4], "texture": "#1"},
+				"east": {"uv": [8, 2, 10, 4], "texture": "#1"},
+				"south": {"uv": [14, 2, 16, 4], "texture": "#1"},
+				"west": {"uv": [12, 2, 14, 4], "texture": "#1"},
+				"up": {"uv": [12, 2, 10, 0], "texture": "#1"},
+				"down": {"uv": [14, 0, 12, 2], "texture": "#1"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [23.5, 0, 0],
+			"translation": [-0.5, 5.75, 3.25]
+		},
+		"head": {
+			"translation": [0, -29, 0],
+			"scale": [1.6, 1.6, 1.6]
+		}
+	},
+	"groups": [
+		{
+			"name": "Mallowstick",
+			"origin": [8, 8, 8],
+			"children": [
+				{
+					"name": "Stick",
+					"origin": [8.5, 1.7, 7.5],
+					"children": [0, 1]
+				}, 2]
+		}
+	]
+}

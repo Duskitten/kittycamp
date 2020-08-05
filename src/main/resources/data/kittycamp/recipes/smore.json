@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "kittycamp:chocolate"
+    },
+    {
+      "item": "kittycamp:marshmallow"
+    },
+    {
+      "item": "kittycamp:grahmcracker"
+    },
+    {
+      "item": "kittycamp:grahmcracker"
+    }
+  ],
+  "result": {
+    "item": "kittycamp:smore",
+    "count": 1
+  }
+}

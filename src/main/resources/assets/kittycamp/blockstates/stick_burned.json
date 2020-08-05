@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "kittycamp:block/stick_burned",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "kittycamp:block/stick_burned",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "kittycamp:block/stick_burned"
+    },
+    "facing=west": {
+      "model": "kittycamp:block/stick_burned",
+      "y": 90
+    }
+  }
+}

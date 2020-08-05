@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "kittycamp:block/stick_mallow",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "kittycamp:block/stick_mallow",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "kittycamp:block/stick_mallow"
+    },
+    "facing=west": {
+      "model": "kittycamp:block/stick_mallow",
+      "y": 90
+    }
+  }
+}

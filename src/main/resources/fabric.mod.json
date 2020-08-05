@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "kittycamp",
+  "version": "1.0.0",
+
+  "name": "Kitty Camp",
+  "description": "A mod to make camping/using the campfire more fun!",
+  "authors": [
+    "Duskitty"
+  ],
+  "contact": {
+    "homepage": "https://twitter.com/Duskitty",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+
+  "license": "MIT",
+  "icon": "assets/kittycamp/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "io.github.duskitty.kittycamp.Main"
+    ],
+    "client": [
+      "io.github.duskitty.kittycamp.Main_Client"
+    ]
+  },
+  "mixins": [
+    "modid.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.7.4",
+    "fabric": "*",
+    "minecraft": "1.16.x"
+  },
+  "suggests": {
+    "flamingo": "*"
+  }
+}
