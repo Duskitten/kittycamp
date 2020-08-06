@@ -8,6 +8,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.DirectionProperty;
 import net.minecraft.util.ActionResult;
@@ -20,6 +21,8 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
+
+import java.util.Random;
 
 public class Block_NoMallow extends Block{
    public static DirectionProperty FACING;
@@ -52,6 +55,25 @@ public class Block_NoMallow extends Block{
       }
    }
 
+
+    public void scheduledTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
+        Direction facing = state.get(FACING);
+        BlockPos nextblock = pos;
+        if (facing == Direction.NORTH) {
+            nextblock = pos.south();}
+        else if(facing == Direction.SOUTH){
+            nextblock = pos.north();}
+        else if(facing == Direction.EAST){
+            nextblock = pos.west();}
+        else if(facing == Direction.WEST){
+            nextblock = pos.east();}
+
+        if (world.getBlockState(nextblock).getBlock().is(Blocks.CAMPFIRE )||world.getBlockState(nextblock).getBlock().is(Blocks.FIRE ) ||world.getBlockState(nextblock).getBlock().is(Blocks.SOUL_CAMPFIRE )||world.getBlockState(nextblock).getBlock().is(Blocks.SOUL_FIRE ) ){
+            world.removeBlock(pos, false);
+            world.setBlockState(pos, Block_Init.BURNEDMALLOWSTICK.getDefaultState().with(FACING, facing));
+        }
+
+    }
 
    public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
       return BOUNDING_SHAPE;
