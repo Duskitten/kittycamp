@@ -18,7 +18,7 @@ public class Main implements ModInitializer {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
-		BlockRenderLayerMap.INSTANCE.putBlock(Block_Init.MALLOWSTICK, RenderLayer.getCutout());
+
 		Block_Init.InitBlocks();
 		Item_Init.InitItems();
 		Generator_Init.init();
